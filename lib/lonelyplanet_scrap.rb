@@ -2,9 +2,9 @@ require 'oga'
 require 'open-uri'
 require 'json'
 
-# This module include all the classes that Get data from LonelyPlanet wesite
+# This module includes a class that handle lonelyplanet scraping functionalities
 module LonelyPlanetScrape
-  # This class gets the news from the website http://www.lonelyplanet.com/taiwan/Tours
+  # This class gets the tour info from tlonelyplanet website
   class LonelyPlanetTours
     # Main Constants
     # Please if the test for uri fails replace contant manually
@@ -14,7 +14,6 @@ module LonelyPlanetScrape
     # XPATH TO EXTRACT DATA
     TOUR_XPATH_CARD = "//article[contains(@class,'card')]"
     CARD_IMGLINK_XPATH = ".//img[contains(@class,'card__figure__img')]/@src"
-    TEST = "//*(@class,'card__figure__img')]"
     CARD_TITLE_XPATH = './/h1'
     CARD_CONTENT_XPATH = ".//div[contains(@class,'card__content__desc')]//p"
     CARD_LINK_XPATH = ".//div[contains(@class,'card__mask')]//a"
